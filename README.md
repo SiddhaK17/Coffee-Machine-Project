@@ -1,6 +1,6 @@
-# ☕ OOP-Based Coffee Machine Simulation
+# ☕ OOP Based Coffee Machine Simulation
 
-An advanced, object-oriented simulation of a coffee vending machine, crafted using Python 3. This project builds upon the foundational logic of the original CLI version hosted in my [coffee-machine-simulator-cli](https://github.com/SiddhaK17/python-cli-project-collection/tree/main/cli-python-mini-projects/coffee-machine-simulator-cli) project, which is part of the [python-cli-project-collection](https://github.com/SiddhaK17/python-cli-project-collection) repository. Refactored using robust **Object-Oriented Programming (OOP)** principles, the simulation mirrors real world vending behavior with modular, reusable, and maintainable code architecture. 
+An advanced, object oriented simulation of a coffee vending machine, crafted using Python 3. This project builds upon the foundational logic of the original CLI version hosted in my [coffee-machine-simulator-cli](https://github.com/SiddhaK17/python-cli-project-collection/tree/main/cli-python-mini-projects/coffee-machine-simulator-cli) project, which is part of the [python-cli-project-collection](https://github.com/SiddhaK17/python-cli-project-collection) repository. Refactored using robust **Object Oriented Programming (OOP)** principles, the simulation mirrors real world vending behavior with modular, reusable, and maintainable code architecture. 
 
 Developed during my structured Python programming journey under the guidance of Dr. Angela Yu throughout the course, this project demonstrates clear separation of concerns, encapsulation of responsibilities, and practical application of core programming concepts.
 
@@ -20,7 +20,7 @@ Through this object oriented refactor, the project becomes highly modular, testa
 ## 💻 Technologies & Concepts Used
 
 - **Python 3.x** — The core programming language used for logic and simulation.
-- **Object-Oriented Programming (OOP)** — Key concepts implemented:
+- **Object Oriented Programming (OOP)** — Key concepts implemented:
   - **Encapsulation** — Each component manages its own data and methods.
   - **Abstraction** — Internal logic of classes hidden from the main control loop.
   - **Separation of Concerns** — Dedicated classes for each system responsibility.
@@ -29,7 +29,7 @@ Through this object oriented refactor, the project becomes highly modular, testa
 - **Custom Class Design** — Including constructors, methods, and attribute handling.
 - **Resource & State Management** — Tracks water, milk, coffee, and profit.
 - **Error Handling & Validation** — Prevents invalid selections or transactions.
-- **Data-Driven Logic** — Uses dictionaries and class objects for beverage definitions.
+- **Data Driven Logic** — Uses dictionaries and class objects for beverage definitions.
 
 ---
 
@@ -123,23 +123,23 @@ What would you like? (latte/espresso/cappuccino/): off
 
 ## ✨ Key Highlights
 
-- 🔄 **Fully Object-Oriented Architecture**  
+- 🔄 **Fully Object Oriented Architecture**  
   Leverages OOP principles including abstraction, encapsulation, and modularity to create a clean, maintainable, and scalable codebase.
 
 - 📁 **Highly Modular Code Structure**  
-  Responsibilities are clearly separated into purpose specific classes and files—`CoffeeMaker`, `MoneyMachine`, `Menu`, and `MenuItem`—making the system easy to understand, debug, and extend.
+  Responsibilities are clearly separated into purpose specific classes and files `CoffeeMaker`, `MoneyMachine`, `Menu`, and `MenuItem` making the system easy to understand, debug, and extend.
 
 - ⚙️ **Realistic Vending Machine Logic**  
   Implements resource sufficiency checks, coin based payment systems, profit tracking, and dynamic drink menu handling, closely emulating real world vending machine behavior.
 
-- 🧾 **Interactive Command-Line Interface (CLI)**  
+- 🧾 **Interactive Command Line Interface (CLI)**  
   Offers a smooth, step by step user experience with feedback mechanisms for invalid inputs, insufficient resources, or payment shortfalls.
 
 - 💰 **Accurate Transaction and Change System**  
   Accepts coin inputs, calculates totals, processes transactions, and returns appropriate change or refunds, ensuring transactional integrity.
 
 - 📈 **Dynamic Inventory and Profit Reporting**  
-  Tracks remaining water, milk, coffee, and accumulated profit, enabling real-time insights through the `report` feature.
+  Tracks remaining water, milk, coffee, and accumulated profit, enabling real time insights through the `report` feature.
 
 - 🔄 **Reusable and Scalable Design**  
   Easily extendable for future upgrades like new drinks, GUI integration, or external data sourcing due to its modular object oriented foundation.
@@ -150,6 +150,6 @@ What would you like? (latte/espresso/cappuccino/): off
 
 This project was designed and implemented as part of my structured journey into advanced Python development, modeled on real world systems. Developed under the guidance of Dr. Angela Yu throughout her programming curriculum, it builds upon a foundational CLI version and elevates it with robust object oriented design principles for better scalability and code maintainability.
 
-The aim was not only to simulate a functional coffee machine but also to demonstrate how clean code architecture and separation of concerns can transform a basic program into a well-structured, extensible application.
+The aim was not only to simulate a functional coffee machine but also to demonstrate how clean code architecture and separation of concerns can transform a basic program into a well structured, extensible application.
 
 Special thanks to all the open source contributors and educators who inspire cleaner code and better software design.
