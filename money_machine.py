@@ -22,20 +22,21 @@ class MoneyMachine:
         self.money_received = 0
         
         for coin in self.COIN_VALUES:
-        while True:
-            try:
-                quantity = int(input(f"How many {coin}?: "))
-    
-                if quantity < 0:
-                    print("Please enter a positive number.")
-                    continue
-    
-                break
-    
-            except ValueError:
-                print("Please enter a valid number.")
-    
-        self.money_received += quantity * self.COIN_VALUES[coin]
+            while True:
+                try:
+                    quantity = int(input(f"How many {coin}?: "))
+        
+                    if quantity < 0:
+                        print("Please enter a positive number.")
+                        continue
+        
+                    break
+        
+                except ValueError:
+                    print("Please enter a valid number.")
+        
+            self.money_received += quantity * self.COIN_VALUES[coin]
+            
         return self.money_received
 
     def make_payment(self, cost):
