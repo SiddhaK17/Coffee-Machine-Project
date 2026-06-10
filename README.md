@@ -63,7 +63,7 @@ The gameplay logic is handled efficiently within a continuous loop in `main.py`,
 ## 📁 Project Structure
 
 ```
-oop-coffee-machine-project/
+Coffee-Machine-Project/
     ├── main.py               # Main control logic and user interaction
     ├── coffee_maker.py       # CoffeeMaker class: manages ingredients and brewing
     └── menu.py               # Menu & MenuItem classes: manages available drinks
@@ -78,12 +78,12 @@ oop-coffee-machine-project/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/oop-coffee-machine-project.git
+   git clone https://github.com/your-username/Coffee-Machine-Project.git
    ```
 
 2. **Navigate to the project folder**
    ```bash
-   cd oop-coffee-machine-project
+   cd Coffee-Machine-Project
    ```
 
 3. **Run the script**
