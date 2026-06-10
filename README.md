@@ -25,10 +25,10 @@ Through this object oriented refactor, the project becomes highly modular, testa
   - **Abstraction** — Internal logic of classes hidden from the main control loop.
   - **Separation of Concerns** — Dedicated classes for each system responsibility.
   - **Modularity** — Code broken into multiple files and reusable classes.
-- **CLI User Interaction** — Inputs and outputs handled via the command line.
+- **CLI User Interaction** — Inputs and outputs handled through an interactive command line interface with user friendly validation and feedback.
 - **Custom Class Design** — Including constructors, methods, and attribute handling.
 - **Resource & State Management** — Tracks water, milk, coffee, and profit.
-- **Error Handling & Validation** — Prevents invalid selections or transactions.
+- **Error Handling & Validation** — Prevents invalid drink selections, invalid coin inputs, negative values, and incomplete transactions through user input validation.
 - **Data Driven Logic** — Uses dictionaries and class objects for beverage definitions.
 
 ---
@@ -41,6 +41,10 @@ Through this object oriented refactor, the project becomes highly modular, testa
   - If not, a message displays the insufficient resource.
 - Coin processing involves inputting the number of U.S. coins:
   - `quarters`, `dimes`, `nickels`, and `pennies`.
+- Input validation ensures:
+  - Only numeric values are accepted.
+  - Negative coin quantities are rejected.
+  - Users are repeatedly prompted until valid input is provided.
 - If sufficient funds are inserted:
   - The drink is served.
   - Change is returned.
@@ -91,34 +95,62 @@ oop-coffee-machine-project/
 
 ## 🧾 Sample Output
 
-```
-What would you like? (latte/espresso/cappuccino/): latte
+### ☕ Successful Order
+
+```text
+What would you like? (latte/espresso/cappuccino): latte
+
 Please insert coins.
 How many quarters?: 10
 How many dimes?: 0
-How many nickles?: 0
+How many nickels?: 0
 How many pennies?: 0
-Here is $0.0 in change.
+
+Here is $0.00 in change.
 Here is your latte ☕️. Enjoy!
 
-What would you like? (latte/espresso/cappuccino/): report
+What would you like? (latte/espresso/cappuccino): report
+
 Water: 100ml
 Milk: 50ml
 Coffee: 76g
-Money: $2.5
-
-What would you like? (latte/espresso/cappuccino/): espresso
-Please insert coins.
-How many quarters?: 4
-How many dimes?: 0
-How many nickles?: 0
-How many pennies?: 0
-Here is $0.5 in change.
-Here is your espresso ☕️. Enjoy!
-
-What would you like? (latte/espresso/cappuccino/): off
+Money: $2.50
 ```
 
+---
+
+### 🛡️ Input Validation Example
+
+```text
+Please insert coins.
+
+How many quarters?: abc
+Please enter a valid number.
+
+How many quarters?: -3
+Please enter a positive number.
+
+How many quarters?: 4
+How many dimes?: 0
+How many nickels?: 0
+How many pennies?: 0
+```
+
+---
+
+### ❌ Insufficient Payment Example
+
+```text
+What would you like? (latte/espresso/cappuccino): cappuccino
+
+Please insert coins.
+How many quarters?: 2
+How many dimes?: 0
+How many nickels?: 0
+How many pennies?: 0
+
+Sorry that's not enough money. Money refunded.
+```
 ---
 
 ## ✨ Key Highlights
@@ -133,10 +165,13 @@ What would you like? (latte/espresso/cappuccino/): off
   Implements resource sufficiency checks, coin based payment systems, profit tracking, and dynamic drink menu handling, closely emulating real world vending machine behavior.
 
 - 🧾 **Interactive Command Line Interface (CLI)**  
-  Offers a smooth, step by step user experience with feedback mechanisms for invalid inputs, insufficient resources, or payment shortfalls.
+  Offers a smooth, step by step user experience with validation for drink selections, coin inputs, insufficient resources, and payment shortfalls, creating a more realistic vending machine simulation.
 
 - 💰 **Accurate Transaction and Change System**  
   Accepts coin inputs, calculates totals, processes transactions, and returns appropriate change or refunds, ensuring transactional integrity.
+
+- 🛡️ **Robust Input Validation**
+  Prevents invalid coin entries, rejects negative quantities, and gracefully handles non-numeric input, improving reliability and user experience.
 
 - 📈 **Dynamic Inventory and Profit Reporting**  
   Tracks remaining water, milk, coffee, and accumulated profit, enabling real time insights through the `report` feature.
